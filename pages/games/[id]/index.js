@@ -1,6 +1,6 @@
 import React from 'react';
 import FullDetailsBlock from '/components/fullReportDetailsPage'
-import VoxNews from "../../voxnews";
+
 
 function Index({match}) {
     return (

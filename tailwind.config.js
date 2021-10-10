@@ -102,7 +102,6 @@ module.exports = {
                     'fade-out-up': 'fade-out-up 1.5s ease-out',
                     'slide-in-left': 'slide-in-left 1.4s ease-out',
                     'slide-in-right': 'slide-in-right 1.4s ease-out',
-                    'slide-right': 'slide-right 1.5s ease-out'
                 }
             },
 

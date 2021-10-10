@@ -6,7 +6,7 @@ function Index({match}) {
     return (
         <>
         <article className='bg-primary-blue h-screen bg-hexagon bg-cover bg-no-repeat'>
-            <FullDetailsBlock title={match.name} descr={match.description} imgSrc={match.imgSrc}/>
+            <FullDetailsBlock descr={match.description} imgSrc={match.imgSrc}/>
         </article>
         </>
     );

@@ -7,7 +7,6 @@ function Index({mostWantedList}) {
     return (
         <>
                 <MostWanted className='animate-fade-in-down ' imgScr={mostWantedList}/>
-            <VoxNews/>
         </>
 
     );

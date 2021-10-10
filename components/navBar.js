@@ -1,37 +1,68 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from "next/link";
 import {AiFillHome} from 'react-icons/ai';
-import {GiBattleGear} from 'react-icons/gi';
-import {GiDwarfFace} from 'react-icons/gi';
-import {GiWantedReward} from 'react-icons/gi';
+import {GiBattleGear, GiDwarfFace, GiWantedReward, GiHamburgerMenu} from 'react-icons/gi';
+import {FaRegWindowClose} from 'react-icons/fa'
 import Image from 'next/image';
 
-function NavBar(props) {
+export default function Navbar({fixed}) {
+    const [navbarOpen, setNavbarOpen] = useState(false);
     return (
-        <nav className='sticky top-0 bg-white bg-opacity-100 z-50'>
-            <div className='flex justify-between'>
-                <article className='p-8'>
-                    <Link href="/">
-                    <Image src='/logo.png' width={132} height={50}/>
-                    </Link>
-                </article>
-                <section className='inline-grid grid-cols-5 justify-items-end grid-flow-col text-center gap-4 p-8'>
-                    <Link href="/">
-                        <a><AiFillHome className='m-auto fill-current text-green-600 text-xl mb-3' /> Home</a>
-                    </Link>
-                    <Link href="/gangs">
-                        <a><GiDwarfFace className='m-auto fill-current text-green-600 text-xl mb-3' />Gangs</a>
-                    </Link>
-                    <Link href="/games">
-                        <a><GiBattleGear className='m-auto fill-current text-green-600 text-xl mb-3'/> Matches</a>
-                    </Link>
-                    <Link href="/mostwanted">
-                        <a><GiWantedReward className='m-auto fill-current text-green-600 text-xl mb-3' /> Most Wanted</a>
-                    </Link>
-                </section>
-            </div>
-        </nav>
+        <>
+            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3 sticky top-0 z-30">
+                <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+                    <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
+                        <Link href="/">
+                            <Image  className='cursor-pointer' src='/logo.png' width={132} height={50}/>
+                        </Link>
+                        <button
+                            className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+                            type="button"
+                            onClick={() => setNavbarOpen(!navbarOpen)}
+                        >
+                            {
+                                (
+                                    navbarOpen ?
+                                        <FaRegWindowClose className='m-auto fill-current text-red-500 font-lg text-2xl mb-3'/>
+                                        :
+                                        <GiHamburgerMenu className='m-auto fill-current text-green-600 font-lg text-2xl mb-3'/>
+                                )
+                            }
+                        </button>
+                    </div>
+                    <div
+                        className={
+                            `md:flex flex-grow items-center ${(navbarOpen ? "" : " hidden")}`
+                        }
+                        id="example-navbar-danger"
+                    >
+                        <ul className="flex flex-col md:flex-row list-none md:ml-auto space-y-3 md:space-x-6 md:space-y-0">
+                            <li>
+                                <Link href="/">
+                                    <a className="inline-flex md:grid md:justify-items-center pl-2 md:pl-0"><AiFillHome className='fill-current text-green-600 text-xl md:mb-3 mr-2 md:mr-0'/> Home</a>
+                                </Link>
+                            </li>
+                            <li className="flex-inline md:flex-none">
+                                <Link href="/gangs">
+                                    <a className="inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0"><GiDwarfFace className='fill-current text-green-600 text-xl md:mb-3 mr-2 md:mr-0'/>Gangs</a>
+                                </Link>
+                            </li>
+                            <li className="flex-inline md:flex-none">
+                                <Link href="/games">
+                                    <a className="inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0"><GiBattleGear
+                                        className='fill-current text-green-600 text-xl md:mb-3 mr-2 md:mr-0'/> Matches</a>
+                                </Link>
+                            </li>
+                            <li className="flex-inline md:flex-none">
+                                <Link href="/mostwanted">
+                                    <a className="inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0"><GiWantedReward
+                                        className='fill-current text-green-600 text-xl md:mb-3 mr-2 md:mr-0'/> Most Wanted</a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
     );
 }
-
-export default NavBar;

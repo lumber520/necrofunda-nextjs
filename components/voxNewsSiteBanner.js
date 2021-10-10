@@ -6,9 +6,9 @@ function VoxNewsSiteBanner(props) {
         <>
             <Link href="/voxnews">
                     <a>
-                        <div className="bg-green-700 text-center py-4 lg:px-4 sticky top-0 cursor-pointer">
+                        <div className="md:bg-green-700 text-center py-4 lg:px-4 sticky top-14 md:top-16 md:top-20 cursor-pointer z-20">
                             <div
-                                className="p-2 bg-green-500 items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex transform  hover:scale-110 ease-in duration-700 "
+                                className="p-2 bg-green-500 items-center text-green-100 leading-none md:rounded-full flex md:inline-flex transform  hover:scale-110 ease-in duration-700"
                             >
                     <span
                         className="flex rounded-full bg-green-400 uppercase px-2 py-1 text-xs mr-3">Vox News</span>

@@ -6,7 +6,7 @@ function LatestNews({newsitems}) {
         newsitems = [' ']
     }}
     const reversedNewsItems = newsitems.reverse();
-    const newTag = reversedNewsItems.[0];
+    const newTag = reversedNewsItems[0];
     const today = new Date();
     const date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
     const time = today.getHours() + ":" + today.getMinutes();
@@ -18,8 +18,10 @@ function LatestNews({newsitems}) {
     });
     return (
         <>
+            <section className="bg-blue-800 text-green-200">
             <h2 className='text-center pt-3 text-2xl font-medium'>Vox News</h2>
-            <p className='text-center'>{dateTime}</p>
+            <p className='text-center pb-2'>{dateTime}</p>
+            </section>
             {(newsitems.length <= 1) ?
                 <article className='bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4' role="alert"><p className='text-center'>No
                     News items available</p></article> :

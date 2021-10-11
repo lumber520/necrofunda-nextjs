@@ -10,9 +10,9 @@ export default function Home({standingData}) {
                 <title> Necro-Funda</title>
             </Head>
             <article
-                className='grid mx-auto items-center py-4 animate-fade-in-down bg-hero-pattern bg-no-repeat bg-cover'>
-                <Image className='max-w-xl min-w-0 map' src='/necromunda-map-main-lables.06829db0.png' alt='Map'
-                       width={1154} height={803}/>
+                className='grid mx-auto items-center py-1 animate-fade-in-down bg-yellow-100'>
+                <Image className='max-w-xl min-w-0 map' src='/necrofunda-map.svg' alt='Map'
+                       width={1000} height={550}/>
             </article>
             <article className='lg:container mx-auto'>
                 <h2 className='py-3 text-2xl hover:underline delay-300 text-center md:text-left'>Current Standings</h2>

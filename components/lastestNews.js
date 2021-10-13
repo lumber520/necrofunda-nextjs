@@ -18,7 +18,7 @@ function LatestNews({newsitems}) {
     });
     return (
         <>
-            <section className="bg-blue-800 text-green-200">
+            <section className="bg-green-400 text-green-200">
             <h2 className='text-center pt-3 text-2xl font-medium'>Vox News</h2>
             <p className='text-center pb-2'>{dateTime}</p>
             </section>

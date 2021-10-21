@@ -5,7 +5,7 @@ import FullDetailsBlock from '/components/fullReportDetailsPage'
 function Index({match}) {
     return (
         <>
-        <article className='bg-primary-blue h-screen bg-hexagon bg-cover bg-no-repeat'>
+        <article className='bg-primary-blue h-screen bg-hexagon h-screen bg-cover bg-no-repeat pt-4'>
             <FullDetailsBlock descr={match.description} imgSrc={match.imgSrc}/>
         </article>
         </>

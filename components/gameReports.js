@@ -5,17 +5,31 @@ import Link from "next/link";
 function gameReports({intro, imgSrc, battleName, url}) {
     return (
         <>
-            <Link className='cursor-pointer'  href={`games/${url}`} key={url} passHref>
-            <article className='cursor-pointer grid grid-flow-col shadow-md transform transition duration-500 hover:scale-110 hover:z-50 rounded '>
-                <div className='gameimage block'>
-                    <Image className='w-full  m-auto' src={imgSrc} layout="responsive" height='200' width='300' alt='Image of game played'/>
-                    <article className='bg-white p-3'>
-                    <h2>{battleName}</h2>
-                    <p>{intro}</p>
-                    <p className='text-purple-900'>Read more</p>
-                    </article>
-                </div>
-            </article>
+            <Link classNameName='cursor-pointer' href={`games/${url}`} key={url} passHref>
+                <a>
+                    <div className="game-border-img w-full lg:max-w-full lg:flex shadow-lg">
+                        <div
+                            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover bg-center text-center overflow-hidden gamesbg"
+                            title="Game played">
+                            <style jsx>{`
+        .gamesbg {
+          background: url( ${imgSrc});
+        }
+      `}</style>
+                        </div>
+                        <div
+                            className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                            <div className="mb-8">
+
+                                <div className="text-gray-900 font-bold text-xl mb-2">{battleName}</div>
+                                <p className="text-gray-700 text-base">{intro}</p>
+                                <p className="text-sm text-gray-600 flex items-center">
+                                    Read More
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </Link>
         </>
     );

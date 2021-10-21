@@ -13,13 +13,17 @@ module.exports = {
                     'polygon': "url('/polygon-luminary.svg')",
                     'shiny-overlay': "url('/shiny-overlay.svg')",
                     'hexagon': "url('/hexagon.svg')",
-                    'rect-light': "url('/rect-light.svg')"
+                    'rect-light': "url('/rect-light.svg')",
+                    'news-bg':"url('/news-bg.png')",
+                    'games-bg':"url('/games-bg.png')"
                 }),
                 backgroundColor: theme => ({
                     ...theme('colors'),
                     'primary-blue': '#0e2a47',
                     'secondary-blue': '#d1e6f4',
                     'gangs-blue': '#0e2a47',
+                    'news-lg':'#30250f',
+                    'news-rg':'#4f4426'
                 }),
 
                 keyframes: {

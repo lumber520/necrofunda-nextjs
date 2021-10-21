@@ -4,7 +4,7 @@ const LatestNews = dynamic(() => import("../../components/lastestNews"));
 function voxNews({newsData}) {
     return (
         <>
-            <LatestNews newsitems={newsData}/>
+            <LatestNews  newsitems={newsData}/>
 
 
         </>

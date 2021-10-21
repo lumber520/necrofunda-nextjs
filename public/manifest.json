@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "NecoFunda: Dominion Campaign",
-    "short_name": "NecoFunda",
-    "description": "Campaign tracker for NecoFunda",
+    "name": "NecroFunda: Dominion Campaign",
+    "short_name": "NecroFunda",
+    "description": "Campaign tracker for NecroFunda",
     "icons": [
         {
             "src": "/icon-192x192.png",

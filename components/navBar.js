@@ -17,6 +17,9 @@ export default function Navbar({fixed}) {
 
     ];
     const highlightMenuClass = 'text-green-600';
+    function closeMenu()  {
+        setNavbarOpen(!navbarOpen)
+    };
     return (
         <>
             <nav
@@ -30,7 +33,7 @@ export default function Navbar({fixed}) {
                         <button
                             className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
                             type="button"
-                            onClick={() => setNavbarOpen(!navbarOpen)}
+                            onClick={closeMenu}
                         >
                             {
                                 (
@@ -50,16 +53,16 @@ export default function Navbar({fixed}) {
                         }
                         id="example-navbar-danger"
                     >
-                        <ul className="flex flex-col md:flex-row list-none md:ml-auto space-y-3 md:space-x-6 md:space-y-0">
+                        <ul  className="flex flex-col md:flex-row list-none md:ml-auto space-y-3 md:space-x-6 md:space-y-0">
                             <li>
-                                <Link href="/">
-                                    <a className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[0] ? "" : `${highlightMenuClass}`)}`}><AiFillHome
+                                <Link href="/"   >
+                                    <a  onClick={closeMenu} className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[0] ? "" : `${highlightMenuClass}`)}`}><AiFillHome
                                         className='fill-current text-xl md:mb-3 mr-2 md:mr-0'/> Home</a>
                                 </Link>
                             </li>
                             <li className="flex-inline md:flex-none">
                                 <Link href="/gangs">
-                                    <a className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[1] ? "" : `${highlightMenuClass}`)}`}><GiDwarfFace
+                                    <a  onClick={closeMenu} className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[1] ? "" : `${highlightMenuClass}`)}`}><GiDwarfFace
                                         className='fill-current text-xl md:mb-3 mr-2 md:mr-0'/>Gangs</a>
                                 </Link>
                             </li>
@@ -70,12 +73,12 @@ export default function Navbar({fixed}) {
                                         query: '/games'
                                     }}
                                 >
-                                    <a className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[2] ? "" : `${highlightMenuClass}`)}`}><GiBattleGear
+                                    <a  onClick={closeMenu} className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[2] ? "" : `${highlightMenuClass}`)}`}><GiBattleGear
                                         className={`fill-current text-xl md:mb-3 mr-2 md:mr-0`}/> Matches</a>
                                 </Link>
                             </li>
                             <li className="flex-inline md:flex-none">
-                                <Link href="/mostwanted">
+                                <Link  onClick={closeMenu} href="/mostwanted">
                                     <a className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[3] ? "" : `${highlightMenuClass}`)}`}><GiWantedReward
                                         className='fill-current text-xl md:mb-3 mr-2 md:mr-0'/> Most
                                         Wanted</a>

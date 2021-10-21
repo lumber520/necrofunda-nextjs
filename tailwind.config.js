@@ -21,9 +21,7 @@ module.exports = {
                     ...theme('colors'),
                     'primary-blue': '#0e2a47',
                     'secondary-blue': '#d1e6f4',
-                    'gangs-blue': '#0e2a47',
-                    'news-lg':'#30250f',
-                    'news-rg':'#4f4426'
+                    'gangs-blue': '#0e2a47'
                 }),
 
                 keyframes: {

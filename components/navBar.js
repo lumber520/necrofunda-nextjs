@@ -78,8 +78,8 @@ export default function Navbar({fixed}) {
                                 </Link>
                             </li>
                             <li className="flex-inline md:flex-none">
-                                <Link  onClick={closeMenu} href="/mostwanted">
-                                    <a className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[3] ? "" : `${highlightMenuClass}`)}`}><GiWantedReward
+                                <Link   href="/mostwanted">
+                                    <a  onClick={closeMenu} className={`inline-flex md:flex-none md:grid md:justify-items-center pl-2 md:pl-0 ${(router.pathname !== menu[3] ? "" : `${highlightMenuClass}`)}`}><GiWantedReward
                                         className='fill-current text-xl md:mb-3 mr-2 md:mr-0'/> Most
                                         Wanted</a>
                                 </Link>

@@ -122,6 +122,10 @@ input[type=radio]:checked {
     border-image: url('/news-bg.png') 30 round;
     border-width: 1.1rem;
 }
+
+tbody > tr:nth-child(odd){
+    background: #dbeafe;
+}
 @media screen and (min-width:640px) {
     main#carousel {
         position:relative;

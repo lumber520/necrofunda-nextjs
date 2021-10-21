@@ -25,19 +25,19 @@ function LatestNews({newsitems}) {
             {(newsitems.length <= 1) ?
                 <article className='bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4' role="alert"><p className='text-center'>No
                     News items available</p></article> :
-                <section className={`text-gray-600 body-font overflow-hidden`}>
-                    <div className="container px-5 py-12 mx-auto ">
+                <section className={`body-font overflow-hidden `}>
+                    <div className="container py-12 mx-auto ">
                         <div className="-my-8">
-                            <div className="py-8 grid mx-auto justify-items-center flex-col-reverse">
-                                <section ref={observe} className='divide-y-2 divide-blue-500 p-6'>
+                            <div className="py-8 grid mx-auto justify-items-center flex-col-reverse bg-news-bg bg-cover bg-no-repeat bg-center md:bg-top max-w-5xl">
+                                <section ref={observe} className='divide-y-2 divide-blue-500 mt-8 pb-32 md:pb-0 transform skew-x-1'>
                                     {reversedNewsItems.map((news) => (
-                                        <article key={news.id * 2} className='border-l-8 border-green-500 max-w-lg '>
-                                            <div className="md:flex-grow shadow-lg p-5 mb-4  even:border-green-500">
+                                        <article key={news.id * 2} className='pb-5 max-w-lg text-white'>
+                                            <div className="md:flex-grow shadow-lg p-5 mb-4 bg-gradient-to-r from-green-800 to-green-900">
                                                 {(newTag === news) ?
-                                                    <p className='max-w-max rounded-full bg-indigo-600 uppercase px-2 py-1 text-sm mr-3 text-white'>
-                                                        NEW</p> : ''}
-                                                <h2 className="text-2xl font-medium text-gray-900 title-font mb-2 pt-4">{news.title}</h2>
-                                                <p className="leading-relaxed pb-3">{inView && news.text}</p>
+                                                    <p className='max-w-max rounded-full bg-indigo-600 uppercase px-2 py-1 text-sm mr-3'>
+                                                        Latest</p> : ''}
+                                                <h2 className="text-2xl font-medium title-font mb-2 pt-4"> {`>>> ${news.title}`}</h2>
+                                                <p className="leading-relaxed pb-3"> {`>>> ${inView && news.text}`}</p>
                                                 <p className='max-w-max text-sm'>{news.date}</p>
                                             </div>
                                         </article>

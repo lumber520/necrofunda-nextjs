@@ -8,9 +8,9 @@ function gameListingsIndex({gameListings}) {
     // console.log(router.asPath);
     return (
         <>
-            <section className='bg-curve-line bg-no-repeat bg-cover'>
+            <section className='bg-curve-line bg-no-repeat bg-cover min-h-screen'>
                 <article
-                    className='grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 grid-flow-row auto-rows-fr gap-4 m-auto p-5 animate-slide-in-left relative z-10 shadow-lg'>
+                    className='p-2 md:p-10  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5 animate-slide-in-left relative z-10'>
 
                     {gameListings.map((match) => (
                         <GameReports className='animate-slide-in-left' key={match.id} intro={match.intro}

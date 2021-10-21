@@ -5,7 +5,7 @@ function GangBio({imgSrc, name, bio, imgOrder }) {
     return (
         <>
 
-                <section className='grid lg:grid-flow-col items-center justify-items-center m-auto max-w-7xl gap-24 md:gap-16 lg:gap-4 mt-8 lg:pt-0'>
+                <section className='grid lg:grid-flow-col items-center justify-items-center m-auto max-w-7xl gap-y-4 md:gap-16 lg:gap-4 mt-8 lg:pt-0'>
                 <article className={imgOrder}>
                     <Image className='pb-5 lg:pb-0 hover:animate-pulse' alt='gang members' src={imgSrc} width='480' height='380'/>
                 </article>

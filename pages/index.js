@@ -4,17 +4,18 @@ import React from "react";
 import CurrentStandings from "../components/currentStandings";
 
 export default function Home({standingData}) {
+
     return (
         <div className='pb-4 mx-auto'>
             <Head>
                 <title> Necro-Funda</title>
             </Head>
             <article
-                className='grid mx-auto items-center animate-fade-in-down bg-yellow-100 -m-4'>
-                <Image className='max-w-xl min-w-0 map -m-2' src='/map with player icons.svg' alt='Map'
+                className='grid mx-auto items-center animate-fade-in-down -m-5 mx-0'>
+                <Image className='max-w-xl min-w-0 map -m-2 mx-0' src='/map with player icons.svg' alt='Map'
                        width={1200} height={550}/>
             </article>
-            <article className='lg:container mx-auto'>
+            <article className='lg:container mx-auto mt-4'>
                 <h2 className='py-3 text-2xl hover:underline delay-300 text-center md:text-left'>Current Standings</h2>
                 <table
                     className='table-fixed md:container block lg:table overflow-auto whitespace-nowrap text-center border-4 border-indigo-800 shadow-lg items-center min-w-full'>

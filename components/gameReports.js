@@ -23,7 +23,7 @@ function gameReports({intro, imgSrc, battleName, url}) {
 
                                 <div className="text-gray-900 font-bold text-xl mb-2">{battleName}</div>
                                 <p className="text-gray-700 text-base">{intro}</p>
-                                <p className="text-sm text-gray-600 flex items-center">
+                                <p className="text-sm text-purple-700 flex items-center">
                                     Read More
                                 </p>
                             </div>

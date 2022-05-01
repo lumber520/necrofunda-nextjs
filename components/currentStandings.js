@@ -1,20 +1,19 @@
 import React from 'react';
 
 
-function CurrentStandings({name, dominator, powerBroker, slaughterer, warmonger, creditor, bgColour}) {
+
+function CurrentStandings({name, dominator, slaughterer, warmonger, creditor,powerBroker}) {
+
     return (
         <>
-            <tbody>
-            <tr>
-                <td className={bgColour}>{name}</td>
-                <td className={bgColour}>{dominator}</td>
-                <td className={bgColour}>{powerBroker}</td>
-                <td className={bgColour}>{creditor}</td>
-                <td className={bgColour}>{slaughterer}</td>
-                <td className={bgColour}>{warmonger}</td>
+            <tr className="odd:bg-blue-100">
+                <td className={"py-4"}>{name}</td>
+                <td className={"py-4"}>{dominator}</td>
+                <td className={"py-4"}>{slaughterer}</td>
+                <td className={"py-4"}>{creditor}</td>
+                <td className={"py-4"}>{warmonger}</td>
+                <td className={"py-4"}>{powerBroker}</td>
             </tr>
-            </tbody>
-
             </>
     );
 }

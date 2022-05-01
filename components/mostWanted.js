@@ -7,25 +7,21 @@ function mostWanted({imgScr}) {
     return (
 
         <>
-            <section className='bg-shiny-overlay bg-cover bg-no-repeat h-screen'>
-                <section
-                    className='grid grid-flow-row grid-cols-7 h-64 justify-center object-center items-center md:max-w-lg container m-auto top-padding-vw'>
-                    {imgScr.map((wanted) => (
-                        <input key={wanted.index * 28} className='h-5 w-5 block m-auto col-span-1 cursor-pointer' type="radio"
-                               name="position"/>
-                    ))}
-
-                    <main id="carousel" className='overflow-x-auto'>
+            <section className='bg-shiny-overlay bg-cover bg-no-repeat h-full' id="most-wanted">
+                <section className="m-auto md:w-2/6 pt-10">
+                <main className="relative w-full flex gap-20 snap-x snap-mandatory overflow-x-auto pb-14">
+                        <div className="snap-center scroll-ml-6 shrink-0">
+                            <div className="shrink-0 w-5 sm:w-30"></div>
+                        </div>
                         {imgScr.map((wanted) => (
-                            <div key={wanted.index + 1} className="item">
-                                <Image key={wanted.index} alt='Wanted' src={wanted} width='368' height='502'/>
+                            <div key={wanted.index + 1} className="snap-center scroll-ml-6 shrink-0 first:pl-8 last:pr-8">
+                                <img key={wanted.index} alt='Wanted' src={wanted} width='368' height='502'  className="shrink-0 rounded-lg shadow-xl"/>
                             </div>
                         ))}
 
                     </main>
-                </section>
             </section>
-
+            </section>
         </>
     )
 

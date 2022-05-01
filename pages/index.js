@@ -38,7 +38,7 @@ export default function Home({standingData}) {
                       />
             </article>
 
-            <article className='lg:container mx-auto mt-4 px-4'>
+            <article className='lg:container mx-auto mt-4 md:px-4'>
                 <h2 className='py-3 text-2xl hover:underline delay-300 text-center md:text-left'>Current Standings</h2>
                 <table
                     className='table-fixed md:container block lg:table overflow-auto whitespace-nowrap text-center border-4 border-indigo-800 shadow-lg items-center min-w-full'>

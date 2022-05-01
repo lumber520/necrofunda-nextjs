@@ -1,5 +1,5 @@
 module.exports = {
-    purge: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}','./styles/**/*.{css}'],
+    content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}','./styles/**/*.css'],
     darkMode: 'class', // or 'media' or 'class'
         theme: {
             extend: {
@@ -15,7 +15,8 @@ module.exports = {
                     'hexagon': "url('/hexagon.svg')",
                     'rect-light': "url('/rect-light.svg')",
                     'news-bg':"url('/news-bg.png')",
-                    'games-bg':"url('/games-bg.png')"
+                    'games-bg':"url('/games-bg.png')",
+                    'news-items-bg':"url('/news_items_bg.jpg')"
                 }),
                 backgroundColor: theme => ({
                     ...theme('colors'),

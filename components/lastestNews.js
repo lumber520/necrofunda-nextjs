@@ -8,7 +8,6 @@ function LatestNews({newsitems}) {
         }
 
     }
-    console.log(newsitems)
     let reversedNewsItems = newsitems.reverse();
     const newTag = reversedNewsItems[0];
     const today = new Date();
@@ -45,28 +44,29 @@ function LatestNews({newsitems}) {
                                                     <p className='max-w-max rounded-full bg-indigo-600 uppercase px-2 py-1 text-sm mr-3'>
                                                         Latest</p> : ''}
                                                  <h2 className="text-2xl font-medium title-font mb-2 pt-4"> {`>>> ${news.title}`}  </h2>
-                                                <p className="leading-relaxed pb-3"> {`${inView && news.para1}`}</p>
-                                                <p className="leading-relaxed pb-3"> {`${news.para2}`}</p>
-                                                {(news.para3 !== undefined) ?  <p className="leading-relaxed pb-3"> {`${inView && news.para3}`} </p> : ''}
+                                               <div className="">
+                                                   <p className="leading-relaxed pb-3 "> {`${inView && news.para1}`}</p>
+                                                <p className="leading-relaxed pb-3 "> {`${news.para2}`}</p>
+                                                {(news.para3 !== undefined) ?  <p className="leading-relaxed pb-3 "> {`${inView && news.para3}`} </p> : ''}
                                                 {(news.para4 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para4}`} </p> : ''}
+                                                    <p className="leading-relaxed pb-3 "> {`${news.para4}`} </p> : ''}
                                                 {(news.para5 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para5}`}</p> : ''}
+                                                    <p className="leading-relaxed pb-3 "> {`${news.para5}`}</p> : ''}
                                                 {(news.para6 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para6}`}</p> : ''}
+                                                    <p className="leading-relaxed pb-3 "> {`${news.para6}`}</p> : ''}
                                                 {(news.para7 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para7}`}</p> : ''}
+                                                    <p className="leading-relaxed pb-3 "> {`${news.para7}`}</p> : ''}
                                                 {(news.para8 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para8}`}</p> : ''}
+                                                    <p className="leading-relaxed pb-3 "> {`${news.para8}`}</p> : ''}
                                                 {(news.para9 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para9}`}</p> : ''}
+                                                    <p className="leading-relaxed pb-3 "> {`${news.para9}`}</p> : ''}
                                                 {(news.para10 !== undefined) ?
                                                     <p className="leading-relaxed pb-3"> {`${news.para10}`}</p> : ''}
                                                 {(news.para11 !== undefined) ?
-                                                    <p className="leading-relaxed pb-3"> {`${news.para12}`}</p> : ''}
+                                                    <p className="leading-relaxed pb-3"> {`${news.para11}`}</p> : ''}
                                                 {(news.para12 !== undefined) ?
                                                     <p className="leading-relaxed pb-3"> {`${news.para12}`}</p> : ''}
-
+                                               </div>
                                             </div>
                                              <p className='max-w-max text-sm'>{news.date}</p>
                                         </article>

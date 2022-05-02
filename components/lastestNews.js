@@ -3,10 +3,12 @@ import useInView from "react-cool-inview";
 
 function LatestNews({newsitems}) {
     {
-        if (newsitems === undefined || newsitems === null) {
-            newsitems = [' ']
+        if (newsitems === undefined || newsitems == null) {
+            newsitems.toString();
         }
+
     }
+    console.log(newsitems)
     let reversedNewsItems = newsitems.reverse();
     const newTag = reversedNewsItems[0];
     const today = new Date();
@@ -36,12 +38,13 @@ function LatestNews({newsitems}) {
                                 <section ref={observe}
                                          className='divide-y-2 divide-blue-500 mt-8 pb-32 md:pb-0 transform skew-x-1'>
                                     {reversedNewsItems.map((news) => (
-                                        <article key={news.id * 2} className='pb-5 max-w-lg text-white'>
+                                         <article key={news.id * 2} className='pb-5 max-w-lg text-white'>
+
                                             <div className="md:flex-grow p-5 mb-4 bg-gradient-to-r">
                                                 {(newTag === news) ?
                                                     <p className='max-w-max rounded-full bg-indigo-600 uppercase px-2 py-1 text-sm mr-3'>
                                                         Latest</p> : ''}
-                                                <h2 className="text-2xl font-medium title-font mb-2 pt-4"> {`>>> ${news.title}`}</h2>
+                                                 <h2 className="text-2xl font-medium title-font mb-2 pt-4"> {`>>> ${news.title}`}  </h2>
                                                 <p className="leading-relaxed pb-3"> {`${inView && news.para1}`}</p>
                                                 <p className="leading-relaxed pb-3"> {`${news.para2}`}</p>
                                                 {(news.para3 !== undefined) ?  <p className="leading-relaxed pb-3"> {`${inView && news.para3}`} </p> : ''}
@@ -57,9 +60,15 @@ function LatestNews({newsitems}) {
                                                     <p className="leading-relaxed pb-3"> {`${news.para8}`}</p> : ''}
                                                 {(news.para9 !== undefined) ?
                                                     <p className="leading-relaxed pb-3"> {`${news.para9}`}</p> : ''}
-                                            </div>
+                                                {(news.para10 !== undefined) ?
+                                                    <p className="leading-relaxed pb-3"> {`${news.para10}`}</p> : ''}
+                                                {(news.para11 !== undefined) ?
+                                                    <p className="leading-relaxed pb-3"> {`${news.para12}`}</p> : ''}
+                                                {(news.para12 !== undefined) ?
+                                                    <p className="leading-relaxed pb-3"> {`${news.para12}`}</p> : ''}
 
-                                            <p className='max-w-max text-sm'>{news.date}</p>
+                                            </div>
+                                             <p className='max-w-max text-sm'>{news.date}</p>
                                         </article>
                                     ))}
                                 </section>

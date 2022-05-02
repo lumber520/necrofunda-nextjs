@@ -26,9 +26,7 @@ export async function getStaticProps(context) {
     return {
         props: {
             newsData
-        },
-        revalidate: 120,
-
+        }
     }
 }
 export default voxNews;

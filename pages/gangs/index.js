@@ -1,7 +1,6 @@
 import React from 'react';
 import GangBio from "../../components/gangBio";
 import VoxNews from "../voxnews";
-//import data from '../data/data'
 function Index({gangsList}) {
     return (
         <>
